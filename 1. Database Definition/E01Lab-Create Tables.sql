@@ -1,0 +1,23 @@
+CREATE TABLE `employees`(
+`id` INT NOT NULL AUTO_INCREMENT,
+`first_name` VARCHAR(50) NOT NULL,
+`last_name` VARCHAR(50) NOT NULL, 
+PRIMARY KEY (`id`))
+DEFAULT CHARACTER SET `utf8mb4`;
+
+CREATE TABLE `categories`(
+`id` INT NOT NULL AUTO_INCREMENT,
+`name` VARCHAR(50) NOT NULL,
+PRIMARY KEY (`id`))
+DEFAULT CHARACTER SET `utf8mb4`;
+
+CREATE TABLE `products`(
+`id` INT NOT NULL AUTO_INCREMENT, 
+`name` VARCHAR(50) NOT NULL,
+`category_id` INT NOT NULL,
+PRIMARY KEY (`id`));
+
+
+ALTER TABLE `products` 
+CHANGE COLUMN `product_name` `product` VARCHAR(50) NOT NULL ;
+

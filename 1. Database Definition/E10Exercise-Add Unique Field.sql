@@ -1,0 +1,4 @@
+ALTER TABLE `users`
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`id`),
+CHANGE `username` `username` VARCHAR(30) NOT NULL UNIQUE;
